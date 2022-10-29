@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+void GetYourPivko(int age, bool isHappy){
+	if (age >= 18 || isHappy == true) {
+	}
+	else if (age < 18 || isHappy == false) {
+    }
+ }
+int main() {
+	
+	return 0;
+}
