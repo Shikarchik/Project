@@ -1,10 +1,45 @@
-int a, i;
-a = -1;
-i = 0;
-while (a != 0) {
-    cin >> a;
-    if (a == 0) break;
-    i = i + 1;
-}
-cout << i;
+#include "MyForm4.h" 
+#include <Windows.h> 
+using namespace Лаба18; // Название проекта 
 
+int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
+	Application::EnableVisualStyles();
+	Application::SetCompatibleTextRenderingDefault(false);
+	Application::Run(gcnew MyForm4);
+	return 0;
+}
+
+
+
+
+
+
+
+
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	int a, b, c, d, f;
+	a = System::Convert::ToDouble(textBox1);
+	b = System::Convert::ToDouble(textBox5);
+	c = System::Convert::ToDouble(textBox4);
+	d = System::Convert::ToDouble(textBox3);
+	f = System::Convert::ToDouble(textBox2);
+;	int massive[5] = { a,b,c,d,f};
+	int max = massive[0];
+
+	for (int i = 0; i < 5; ++i) {
+		if (massive[i] > max) {
+			max = massive[i];
+			textBox6->Text = System::Convert::ToString(max);
+
+		}
+	}
+}
+};
+}
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	LNK2005	WinMain already defined in Source.obj	Лаба 18	C:\Users\Shikaro\source\repos\Лаба 18\Лаба 18\Source1.obj	1	
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	LNK1169	one or more multiply defined symbols found	Лаба 18	C:\Users\Shikaro\source\repos\Лаба 18\x64\Debug\Лаба 18.exe	1	
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	LNK2005	"extern "C" int __cdecl WinMain(struct HINSTANCE__ *,struct HINSTANCE__ *,char *,int)" (?WinMain@@$$J0YAHPEAUHINSTANCE__@@0PEADH@Z) already defined in Source.obj	Лаба 18	C:\Users\Shikaro\source\repos\Лаба 18\Лаба 18\Source1.obj	1	
